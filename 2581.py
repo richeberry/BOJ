@@ -17,3 +17,6 @@ if len(primelst) == 0:
     print(-1)
 else:
     print(sum(primelst),primelst[0],sep='\n') # 소수리스트 합과 제일 작은 값 출력
+
+
+
