@@ -19,13 +19,7 @@ while True:
     if n % 5 == 0:
         n -= 1 
         cnt += 1
-    elif n % 3 == 0:
-        n //= 3
-        cnt += 1
-    # 2로 나누어질 때
-    elif n % 2 == 0:
-        n //= 2
-        cnt += 1
+
     else:
         n -= 1
         cnt += 1
