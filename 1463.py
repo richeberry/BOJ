@@ -1,32 +1,33 @@
 
-# BOJ _ 1463 
+# BOJ _ 1463 1로 만들기
 
-n = int(input())
-
-cnt = 0
+n = 5
 
 dp = [0] * (n + 1)
 dp[1] = 1
-dp[2] = 1
-dp[3] = 1
+
+# bottom up으로 진행
+
+# 시작 전 DP 확인
 print(dp)
+
+tmp = 1
+before = dp[0]
 while True:
-    print(n)
     # 탈출 조건
-    if n == 1:
+    print(dp)
+    print('tmp',tmp)
+    print('before',before)
+    if before == n:
         break
-    # 3으로 나누어질 때
-    if n % 5 == 0:
-        n -= 1 
-        cnt += 1
 
+    elif (tmp * 2) % n == 0:
+        dp[n] = before + 1
+        before = tmp * 2
+    elif (tmp * 3) % n == 0:
+        dp[n] = before + 1
+        before = tmp * 3
     else:
-        n -= 1
-        cnt += 1
-
-print(cnt)
-
-
-
-
-
+        dp[n] = before + 1
+        before = tmp + 1
+    tmp += 1
