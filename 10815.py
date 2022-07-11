@@ -1,15 +1,18 @@
-n = int(input())
-cardlst = list(map(int, input().split()))
-m = int(input())
-tellcard = list(map(int, input().split()))
-printlst = []
-for i in tellcard:
-    if i in cardlst:
-        printlst.append(1)
+# n = int(input())
+# cardnum = sorted(list(map(int, input().split())))
+cardnum = [-10, 2, 3, 6, 10]
+print(cardnum)
+# m = int(input())
+numlst = sorted(list(map(int, input().split())), reverse = True)
+print(numlst)
+
+ans = []
+while numlst:
+    if numlst.pop(0) in cardnum:
+        ans.append(1)
     else:
-        printlst.append(0)
+        ans.append(0)
+    print(numlst)
 
-for i in printlst:
-    print(i, end=' ')
-
-    
+# for i in ans:
+#     print(i, end = ' ')
