@@ -1,6 +1,6 @@
 # BOJ _ 연결 요소의 개수
 
-# 시간 초과
+# DFS _ 시간 초과
 
 dic = {}
 n, m = map(int, input().split())
@@ -45,6 +45,8 @@ def bfs(graph, v, visit):
             if not visit[i]: # 연결된 노드가 방문하지 않았다면
                 que.append(i) # que에 다음 방문자로 지정(이 노드와 연결된 노드 확인하기 위해)
                 visit[i] = True # 방문
+
+n, m = map(int, input().split())
 
 graph = [[] for _ in range(n + 1)]
 for _ in range(m):
